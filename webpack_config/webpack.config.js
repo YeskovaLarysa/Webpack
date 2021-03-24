@@ -17,6 +17,16 @@ const conf = {
             exclude: /node_modules/,
             use: ['babel-loader'],
         },
+        // CSS, PostCSS, Sass
+    {
+        test: /\.(scss|css)$/,
+        use: [
+            'style-loader',
+            'css-loader',
+            'postcss-loader',
+            'sass-loader'],
+    },
+
     ],
 },
   plugins: [
