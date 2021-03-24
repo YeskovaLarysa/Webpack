@@ -1,1 +1,1 @@
-(()=>{console.log("Hallo world");const o=o=>{console.log(`hello ${o}`)};o("asdad"),o("Test")})();
+!function(){console.log("Hallo world");var o=function(o){console.log("hello ".concat(o))};o("asdad"),o("Test")}();

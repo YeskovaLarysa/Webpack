@@ -9,6 +9,16 @@ const conf = {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].bundle.js',
   },
+  module: {
+    rules: [
+        // JavaScript
+        {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: ['babel-loader'],
+        },
+    ],
+},
   plugins: [
     new HtmlWebpackPlugin({
       title: 'webpack Boilerplate',
@@ -28,4 +38,9 @@ const conf = {
 
 }
 
-module.exports = () => {return conf};
+module.exports = (env, options) => {
+    const isProd = options.mode === 'production';
+    conf.target = isProd ? 'browserslist' : 'web';
+
+    return conf;
+};

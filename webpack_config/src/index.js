@@ -6,3 +6,13 @@ const foo = (name) => {
 
 foo('asdad');
 foo('Test');
+
+class User {
+    constructor(name) {
+        this.__name = name;
+
+    }
+    printName() {
+        console.log(this.__name);
+    }
+}
