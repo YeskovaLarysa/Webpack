@@ -1,3 +1,5 @@
+import {User} from './user.js'
+
 console.log('Hallo world');
 
 const foo = (name) => {
@@ -7,12 +9,7 @@ const foo = (name) => {
 foo('asdad');
 foo('Test');
 
-class User {
-    constructor(name) {
-        this.__name = name;
 
-    }
-    printName() {
-        console.log(this.__name);
-    }
-}
+
+const john = new User ("John")
+john.printName()
